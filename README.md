@@ -5,6 +5,12 @@ Actividad 1: Sintaxis de Lenguajes.
 - PHP
 - Ruby
 - Rust
+
+Actividad 2: 
+- Task tracker; Lenguaje: Python.
+- Sintaxis: 1 Base de datos no relacionada, 2 Bases de datos relacionadas, 1 base de datos migration.
+- Formulario; Lenguaje: PHP + HTML + tailwind
+
   
 #### Integrantes <hr>
 - Alejandro Chavez 32.278.392 
