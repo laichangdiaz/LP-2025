@@ -1,4 +1,4 @@
-# Lenguajes Programacion 2025 
+# **Lenguajes Programacion 2025**
 Universidad José Antonio Páez  
 Actividad 1: Sintaxis de Lenguajes.
 - Go
@@ -12,7 +12,7 @@ Actividad 2:
 - Formulario; Lenguaje: PHP + HTML + tailwind
 
   
-#### Integrantes <hr>
+#### Integrantes 
 - Alejandro Chavez 32.278.392 
 - Cesar Dominguez 30.648.830 
 - Jose Santana 31.608.829 
