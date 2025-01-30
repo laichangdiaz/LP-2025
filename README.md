@@ -8,7 +8,7 @@ Actividad 1: Sintaxis de Lenguajes.
 
 Actividad 2: 
 - Task tracker; Lenguaje: Python.
-- Sintaxis: 1 Base de datos no relacionada, 2 Bases de datos relacionadas, 1 base de datos migration.
+- Sintaxis: 1 Base de datos no relacionada (MongoDB), 2 Bases de datos relacionadas (MySQL y PostgreSQL, 1 base de datos migrations , 1 base de datos escalabre (Database Indexes).
 - Formulario; Lenguaje: PHP + HTML + tailwind
 
   
