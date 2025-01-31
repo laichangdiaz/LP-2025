@@ -23,3 +23,14 @@ En la carpeta raiz
 source bin/activate
 
 ```
+
+## Crear comando Personalizado
+Ve comando por comando y los ultimos dos ve cual es el que te sirve, depende de tu consola
+```bash
+
+chmod +x Main.py
+alias task="python Main.py"
+source ~/.bashrc
+source ~/.zshrc
+
+```
