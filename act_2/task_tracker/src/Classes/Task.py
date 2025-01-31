@@ -1,3 +1,4 @@
+# Typer - Ayuda en Consola / Json - Manejo de Json / prettytable - Esttilo tabla
 import typer
 import json
 from prettytable import PrettyTable
@@ -64,6 +65,7 @@ def actualizar_tarea(id: int, name: str, description: str, estado: bool):
     # Listado de Tareas
     ver_tareas()
 
+# Listado de Tareas en Estado Tabla
 @app.command()
 def ver_tareas():
     with open("Data/Data.json", "r") as file:
