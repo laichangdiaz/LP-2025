@@ -24,7 +24,41 @@ def crear_tarea(name: str, description: str):
 
     # Listado de Tareas
     ver_tareas()
+
+@app.command()
+def eliminar_tarea(name: str):
+    data = []
+    with open("Data/Data.json", "r") as file:
+        data = json.load(file)
+
+    for task in data:
+        if task["name"] == name:
+            data.remove(task)
+            break
+
+    with open("Data/Data.json", "w") as file:
+        json.dump(data, file)
+
+    # Listado de Tareas
+    ver_tareas()
         
+
+@app.command()
+def actualizar_tarea(name: str, description: str):
+    data = []
+    with open("Data/Data.json", "r") as file:
+        data = json.load(file)
+
+    for task in data:
+        if task["name"] == name:
+            task["description"] = description
+            break
+
+    with open("Data/Data.json", "w") as file:
+        json.dump(data, file)
+
+    # Listado de Tareas
+    ver_tareas()
 
 @app.command()
 def ver_tareas():
