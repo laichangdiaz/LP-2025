@@ -22,7 +22,7 @@ def crear_tarea(name: str, description: str):
     })
 
     with open("Data/Data.json", "w") as file:
-        json.dump(data, file)
+        json.dump(data, file, indent=4)
 
     # Listado de Tareas
     ver_tareas()
@@ -39,7 +39,7 @@ def eliminar_tarea(id: int):
             break
 
     with open("Data/Data.json", "w") as file:
-        json.dump(data, file)
+        json.dump(data, file, indent=4)
 
     # Listado de Tareas
     ver_tareas()
@@ -59,7 +59,7 @@ def actualizar_tarea(id: int, name: str, description: str, estado: bool):
             break
 
     with open("Data/Data.json", "w") as file:
-        json.dump(data, file)
+        json.dump(data, file, indent=4)
 
     # Listado de Tareas
     ver_tareas()
