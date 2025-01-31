@@ -12,11 +12,13 @@ def crear_tarea(name: str, description: str):
     print(f"Task created: {name} - {description}")
     data = []
     with open("Data/Data.json", "r") as file:
-        data = json.load(file)
+        data = json.load(file)  
 
     data.append({
+        "id": len(data),
         "name": name,
-        "description": description
+        "description": description,
+        "estado": False
     })
 
     with open("Data/Data.json", "w") as file:
@@ -26,13 +28,13 @@ def crear_tarea(name: str, description: str):
     ver_tareas()
 
 @app.command()
-def eliminar_tarea(name: str):
+def eliminar_tarea(id: int):
     data = []
     with open("Data/Data.json", "r") as file:
         data = json.load(file)
 
     for task in data:
-        if task["name"] == name:
+        if task["id"] == id:
             data.remove(task)
             break
 
@@ -44,14 +46,16 @@ def eliminar_tarea(name: str):
         
 
 @app.command()
-def actualizar_tarea(name: str, description: str):
+def actualizar_tarea(id: int, name: str, description: str, estado: bool):
     data = []
     with open("Data/Data.json", "r") as file:
         data = json.load(file)
 
     for task in data:
-        if task["name"] == name:
+        if task["id"] == id:
+            task["name"] = name
             task["description"] = description
+            task["estado"] = estado
             break
 
     with open("Data/Data.json", "w") as file:
@@ -66,8 +70,8 @@ def ver_tareas():
         data = json.load(file)
         table = PrettyTable()
         # Asignacion de los encabezados de la tabla
-        table.field_names = ["Name", "Description"]
+        table.field_names = ["ID","Name", "Description", "Estado"]
         for task in data:
             #Agregar filas a la tabla
-            table.add_row([task["name"], task["description"]])
+            table.add_row([task["id"],task["name"], task["description"], task["estado"]])
         print(table)
