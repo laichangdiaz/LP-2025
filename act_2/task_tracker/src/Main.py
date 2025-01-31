@@ -1,4 +1,13 @@
 from Classes import Task
+import os
+
+def clear():
+    if os.name == "nt":
+        os.system("cls")
+    else:
+        os.system("clear")
+
+clear()
 
 app = Task.app
 
